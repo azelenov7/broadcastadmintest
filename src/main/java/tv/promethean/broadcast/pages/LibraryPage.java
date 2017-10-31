@@ -6,8 +6,12 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 public class LibraryPage extends PageObject {
 
-    @FindBy (xpath = "//h1[contains(.,'Library')]")
-    public WebElementFacade library;
+    @FindBy (xpath = "//span[contains(.,'Analytics')]")
+    public WebElementFacade analyticsButton;
+
+    public void analyticsButton() {
+        analyticsButton.click();
+    }
 
     @FindBy (xpath = "//div[@class='cta_primary']")
     public WebElementFacade createNewButton;

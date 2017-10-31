@@ -7,7 +7,13 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 public class AnalyticsPage extends PageObject {
 
-    @FindBy (xpath = "Analytics")
-    public WebElementFacade analytics;
+    @FindBy (xpath = "//span[contains(.,'Channels')]")
+    public WebElementFacade channelsButton;
 
+    public void channelsButton() {
+        channelsButton.click();
+    }
+
+    @FindBy (xpath = "//h1[contains(.,'Analytics')]")
+    public WebElementFacade analytics;
 }

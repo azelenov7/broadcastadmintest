@@ -4,11 +4,6 @@ import tv.promethean.broadcast.steps.ViewerSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import net.thucydides.junit.annotations.TestData;
-
-import java.util.Arrays;
-import java.util.Collection;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,10 +37,9 @@ public class HomePageTest {
     @Test
     public void userShouldBeAbleToNavigate() {
 
-        viewer.click_on_the_library_button();
-        viewer.click_on_the_analytics_button();
-
+        viewer.go_to_the_library_page();
+        viewer.go_to_the_analytics_page();
+        viewer.go_to_the_channels_page();
     }
-
 }
 
